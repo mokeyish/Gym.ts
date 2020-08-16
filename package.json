@@ -1,6 +1,6 @@
 {
   "name": "@tszone/gym",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Gym for typescript, A toolkit for developing and comparing reinforcement learning algorithms.",
   "keywords": ["gym", "ai", "typescript", "reinforcement learning"],
   "repository": {
