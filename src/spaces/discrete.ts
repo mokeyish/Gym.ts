@@ -1,8 +1,5 @@
-/**
- * Created by yish on 2020/08/11.
- */
 import { Space } from './space';
-import { INdArray, int32, NdArray } from '@tszone/ndarray';
+import { int32 } from '@tszone/ndarray';
 import { assert } from '@tszone/ext';
 
 /**

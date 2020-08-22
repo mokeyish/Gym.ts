@@ -1,5 +1,5 @@
 import { Dict, Space } from './spaces';
-import { array1d, INdArray } from '@tszone/ndarray';
+import { array1d, NdArray } from '@tszone/ndarray';
 
 export type EnvArgs = { [key: string]: any };
 
@@ -50,7 +50,7 @@ export abstract class Env {
      * @param action (object): an action provided by the agent
      * @return Step
      */
-    abstract step(action: any): Step;
+    abstract step(action: unknown): Step;
 
     /**
      * Resets the state of the environment and returns an initial observation.
@@ -286,6 +286,6 @@ export interface Step {
     info: any;
 }
 
-export type Observation = INdArray;
+export type Observation = NdArray<number>;
 
 export type RenderMode = 'human' | 'rgb_array' | 'ansi';

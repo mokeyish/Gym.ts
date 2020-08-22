@@ -482,6 +482,20 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@tszone/ext@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@tszone/ext/-/ext-1.0.1.tgz#5404969d00eac4b346e82ef43d00b496e383637e"
+  integrity sha512-TgcKXIOi0RwnLpW06cVgPDtQYBbVtt4lSG9koZRYB7N+XfCFht5yMEeiUCpOuwoPonsU2nRCygZRtLinqfenDQ==
+  dependencies:
+    seedrandom "^3.0.5"
+
+"@tszone/ndarray@1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tszone/ndarray/-/ndarray-1.0.2.tgz#4b350e87f613fa25158dbfb14dba2e2112f15a18"
+  integrity sha512-1YG3O7N64n/TKqKSxsM6hPFOXwqd7LwHvdmI4ZDSI3Gh5LKOdFGzcYkgpqU6iSHrsPxPZFIIDZL6iaOx6uRXAw==
+  dependencies:
+    "@tszone/ext" "1.0.1"
+
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.1.9"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.9.tgz#77e59d438522a6fb898fa43dc3455c6e72f3963d"
@@ -576,11 +590,6 @@
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.0.2.tgz#5bb52ee68d0f8efa9cc0099920e56be6cc4e37f3"
   integrity sha512-IkVfat549ggtkZUthUzEX49562eGikhSYeVGX97SkMFn+sTZrgRewXjQ4tPKFPCykZHkX1Zfd9OoELGqKU2jJA==
-
-"@types/seedrandom@^2.4.28":
-  version "2.4.28"
-  resolved "https://registry.yarnpkg.com/@types/seedrandom/-/seedrandom-2.4.28.tgz#9ce8fa048c1e8c85cb71d7fe4d704e000226036f"
-  integrity sha512-SMA+fUwULwK7sd/ZJicUztiPs8F1yCPwF3O23Z9uQ32ME5Ha0NmDK9+QTsYE4O2tHXChzXomSWWeIhCnoN1LqA==
 
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
@@ -1338,11 +1347,6 @@ expect@^26.3.0:
     jest-matcher-utils "^26.3.0"
     jest-message-util "^26.3.0"
     jest-regex-util "^26.0.0"
-
-ext4ts@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ext4ts/-/ext4ts-1.0.0.tgz#7ad8e684a007c6c41961e1269f5cdd10d1f94fb8"
-  integrity sha512-+YkTodWOLIt0kxshy9FxVdUKDsLHXY5dVGuGgyyhcxkj0y+gLWR0pHdcRwol1kWYWeWS+1Ibxa4kMK3OMOseJw==
 
 extend-shallow@^2.0.1:
   version "2.0.1"
@@ -2561,13 +2565,6 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-ndarray4ts@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ndarray4ts/-/ndarray4ts-1.0.0.tgz#57bb99be8c9463006fd64faba4c529ad25ebb307"
-  integrity sha512-g7l4V17ZgdEKE0mogTrN3kksMOhNFkQipg/ko7wtSMMIY3oanU5Rz0H/Iv6fWO6rE7Kgq7kFD/gPq86kuW7rDw==
-  dependencies:
-    ext4ts "1.0.0"
-
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
@@ -2849,11 +2846,6 @@ qs@~6.5.2:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
 
-random-js@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/random-js/-/random-js-2.1.0.tgz#0c03238b0a4f701f7a4c7303036ade3083d8ee14"
-  integrity sha512-CRUyWmnzmZBA7RZSVGq0xMqmgCyPPxbiKNLFA5ud7KenojVX2s7Gv+V7eB52beKTPGxWRnVZ7D/tCIgYJJ8vNQ==
-
 react-is@^16.12.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -2877,11 +2869,6 @@ read-pkg@^5.2.0:
     normalize-package-data "^2.5.0"
     parse-json "^5.0.0"
     type-fest "^0.6.0"
-
-reflect-metadata@^0.1.13:
-  version "0.1.13"
-  resolved "https://registry.yarnpkg.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
-  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
 
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"

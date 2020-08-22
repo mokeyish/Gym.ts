@@ -1,5 +1,5 @@
 import { Space } from './space';
-import { DataType, float32, INdArray, Ix, NdArray } from '@tszone/ndarray';
+import { DataType, float32, Ix, NdArray } from '@tszone/ndarray';
 import { assert } from '@tszone/ext';
 
 
@@ -20,11 +20,11 @@ import { assert } from '@tszone/ext';
 export class Box extends Space {
     public readonly shape: Ix;
     public readonly dtype: DataType;
-    public readonly low: INdArray<number, Ix>;
-    public readonly high: INdArray<number, Ix>;
-    public readonly boundedBelow: INdArray<boolean, Ix>;
-    public readonly boundedAbove: INdArray<boolean, Ix>;
-    constructor(low: INdArray<number, Ix> | number, high: INdArray<number, Ix> | number, shape?: Ix, dtype: DataType = float32) {
+    public readonly low: NdArray<number>;
+    public readonly high: NdArray<number>;
+    public readonly boundedBelow: NdArray<boolean>;
+    public readonly boundedAbove: NdArray<boolean>;
+    constructor(low: NdArray<number> | number, high: NdArray<number> | number, shape?: Ix, dtype: DataType = float32) {
         super();
         this.dtype = dtype;
 
@@ -76,7 +76,7 @@ export class Box extends Space {
         return false;
     }
 
-    sample(): INdArray {
+    sample(): NdArray<number> {
         throw new Error();
     }
     toString(): string {

@@ -1,4 +1,4 @@
-import { DataType, INdArray, Ix } from '@tszone/ndarray';
+import { DataType, Ix } from '@tszone/ndarray';
 import { assert } from '@tszone/ext';
 
 
@@ -6,7 +6,7 @@ export abstract class Space {
     public readonly shape?: Ix;
     public readonly dtype?: DataType;
     protected constructor(shape?: Ix, dtype?: DataType) {
-        assert(!dtype, 'dtype must be explicitly provided.')
+        assert(dtype !== undefined, 'dtype must be explicitly provided.')
         this.shape = shape;
         this.dtype = dtype;
         this.seed();
