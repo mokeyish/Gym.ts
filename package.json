@@ -1,6 +1,6 @@
 {
   "name": "@tszone/gym",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Gym for typescript, A toolkit for developing and comparing reinforcement learning algorithms.",
   "keywords": ["gym", "ai", "typescript", "reinforcement learning"],
   "repository": {
@@ -17,8 +17,8 @@
     "lint": "tslint --project ./tsconfig.json --fix"
   },
   "dependencies": {
-    "@tszone/ext": "1.0.3",
-    "@tszone/ndarray": "1.0.4"
+    "@tszone/ext": "1.0.5",
+    "@tszone/ndarray": "1.0.6"
   },
   "devDependencies": {
     "@types/jest": "^26.0.9",

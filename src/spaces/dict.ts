@@ -3,7 +3,7 @@ import { Space } from './space';
 export class Dict extends Space {
     public readonly spaces: Map<string, any> = new Map<string, any>();
     constructor(spaces?: { [key: string]: any }) {
-        super();
+        super([0], 'float64');
         if (spaces) {
             for (const k of Object.keys(spaces)) {
                 this.spaces.set(k, spaces[k]);

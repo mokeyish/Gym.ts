@@ -1,5 +1,5 @@
 import { Space } from './space';
-import { DataType, float32, Ix, NdArray } from '@tszone/ndarray';
+import { DataType, float32, IxA, NdArray } from '@tszone/ndarray';
 import { assert } from '@tszone/ext';
 
 
@@ -18,16 +18,11 @@ import { assert } from '@tszone/ext';
  *      Box(2, )
  */
 export class Box extends Space {
-    public readonly shape: Ix;
-    public readonly dtype: DataType;
     public readonly low: NdArray<number>;
     public readonly high: NdArray<number>;
     public readonly boundedBelow: NdArray<boolean>;
     public readonly boundedAbove: NdArray<boolean>;
-    constructor(low: NdArray<number> | number, high: NdArray<number> | number, shape?: Ix, dtype: DataType = float32) {
-        super();
-        this.dtype = dtype;
-
+    constructor(low: NdArray<number> | number, high: NdArray<number> | number, shape?: IxA, dtype: DataType = float32) {
         // determine shape if it isn't provided directly
         if (shape) {
             assert(typeof low === 'number' || low.shape.sequenceEqual(shape), 'low.shape doesn\'t match provided shape');
@@ -40,15 +35,13 @@ export class Box extends Space {
         } else {
             throw new Error('shape must be provided or inferred from the shapes of low or high');
         }
-
+        super(shape, dtype);
         if (typeof low === 'number') {
             low = NdArray.full(shape, low, dtype);
         }
         if (typeof high === 'number') {
             high = NdArray.full(shape, high, dtype);
         }
-
-        this.shape = shape;
         this.low = low;
         this.high = high;
         this.boundedBelow = this.low.map((x: number) => -Infinity < x);

@@ -1,5 +1,5 @@
 import { Space } from './space';
-import { int32 } from '@tszone/ndarray';
+import { int32, Ix1 } from '@tszone/ndarray';
 import { assert } from '@tszone/ext';
 
 /**
@@ -11,7 +11,7 @@ export class Discrete extends Space {
     public readonly n: number;
     constructor(n: number) {
         assert(n >= 0);
-        super(undefined, int32);
+        super([n], int32);
         this.n = n;
     }
 

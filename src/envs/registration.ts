@@ -36,9 +36,9 @@ export class EnvSpec {
         this.maxEpisodeSteps = maxEpisodeSteps;
         this.args = args ?? { };
     }
-    make(args?: EnvArgs): Env {
+    make<E extends Env = Env>(args?: EnvArgs): E {
         args = Object.assign({ }, this.args, args);
-        return new this.entryPoint(args);
+        return new this.entryPoint(args) as E;
     }
 }
 
@@ -58,7 +58,7 @@ interface EnvSpecOptions extends EnvArgs {
  */
 export class EnvRegistry {
     private readonly envSpecs: { [key: string]: any } = { };
-    make(path: string, args?: EnvArgs ): Env {
+    make<E extends Env = Env>(path: string, args?: EnvArgs ): E {
         return this.spec(path)?.make(args);
     }
     all(): EnvSpec[] {
@@ -82,7 +82,7 @@ const registry = new EnvRegistry();
 export function register(id: string, args: EnvSpecOptions): EnvSpec {
     return registry.register(id, args);
 }
-export function make(id: string, args?: EnvArgs): Env {
+export function make<E extends Env = Env>(id: string, args?: EnvArgs): E {
     return registry.make(id, args);
 }
 export function spec(id: string): EnvSpec {
