@@ -1,6 +1,6 @@
 {
   "name": "@tszone/gym",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Gym for typescript, A toolkit for developing and comparing reinforcement learning algorithms.",
   "keywords": ["gym", "ai", "typescript", "reinforcement learning"],
   "repository": {
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@tszone/ext": "1.0.6",
-    "@tszone/ndarray": "1.0.7"
+    "@tszone/ndarray": "1.0.8"
   },
   "devDependencies": {
     "@types/jest": "^26.0.9",
